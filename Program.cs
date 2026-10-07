@@ -40,7 +40,6 @@
         {
             char[] hexnums = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
             input = input.ToUpper();
-            Console.WriteLine(input);
             int[] rgb = new int[3];
             int conversion = 0;
             int[] positions = new int [6];
@@ -57,11 +56,7 @@
             for (int i = 0; i < positions.Length; i+=2)
             {
                 conversion = positions[i] * 16 + positions[i + 1];
-                rgb[(i) / 2] = conversion;
-            }
-            for (int i = 0; i < positions.Length; i++)
-            {
-                Console.WriteLine(positions[i]);
+                rgb[i / 2] = conversion;
             }
             return rgb;
         }
@@ -70,7 +65,7 @@
             string input = Console.ReadLine();
             int[] conversion = convert(input);
             Console.WriteLine($"red value: {conversion[0]}");
-            Console.WriteLine($"gren value: {conversion[1]}");
+            Console.WriteLine($"green value: {conversion[1]}");
             Console.WriteLine($"blue value: {conversion[2]}");
         }
     }
