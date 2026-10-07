@@ -42,7 +42,6 @@
             input = input.ToUpper();
             Console.WriteLine(input);
             int[] rgb = new int[3];
-            string hex = "";
             int conversion = 0;
             int[] positions = new int [6];
             for (int i = 0; i < 6; i++)
